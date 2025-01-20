@@ -18,7 +18,7 @@ import { NewsstandService } from '../newsstand.service';
         <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>      </form>
     </section>
     <section class="results">
-      <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+      <app-newsletter-detail *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-newsletter-detail>
     </section>
   `,
   styleUrls: ['./home.component.css'],

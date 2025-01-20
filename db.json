@@ -1,5 +1,5 @@
 {
-  "locations": [
+  "newsletters": [
     {
       "id": 0,
       "name": "Breaking US Politics",
@@ -65,7 +65,7 @@
       "name": "Breaking World News",
       "city": "Oakland",
       "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+      "photo": "assets/BreakingWorldNews.png",
       "availableUnits": 5,
       "wifi": true,
       "laundry": true
