@@ -1,15 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousingLocationComponent } from '../housing-location/housing-location.component';
-import { HousingLocation } from '../housinglocation';
-import { HousingService } from '../housing.service';
+import { NewsletterDetailComponent } from '../newsletter-detail/newsletter-detail.component';
+import { Newsletter } from '../newsletter';
+import { NewsstandService } from '../newsstand.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    HousingLocationComponent
+    NewsletterDetailComponent
   ],
   template: `
     <section>
@@ -25,12 +25,12 @@ import { HousingService } from '../housing.service';
 })
 
 export class HomeComponent {
-  housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
-  filteredLocationList: HousingLocation[] = [];
+  housingLocationList: Newsletter[] = [];
+  housingService: NewsstandService = inject(NewsstandService);
+  filteredLocationList: Newsletter[] = [];
 
   constructor() {
-    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+    this.housingService.getAllHousingLocations().then((housingLocationList: Newsletter[]) => {
       this.housingLocationList = housingLocationList;
       this.filteredLocationList = housingLocationList;
     });

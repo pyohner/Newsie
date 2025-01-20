@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousingLocation } from '../housinglocation';
+import { Newsletter } from '../newsletter';
 import { RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
@@ -17,11 +17,11 @@ import { RouterLink, RouterOutlet} from "@angular/router";
       <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
     </section>
   `,
-  styleUrls: ['./housing-location.component.css'],
+  styleUrls: ['./newsletter-detail.component.css'],
 })
 
-export class HousingLocationComponent {
+export class NewsletterDetailComponent {
 
-  @Input() housingLocation!: HousingLocation;
+  @Input() housingLocation!: Newsletter;
 
 }
